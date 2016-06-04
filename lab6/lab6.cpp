@@ -2,6 +2,7 @@
 #include <vector>
 #include <list>
 
+
 int main() {
 	unsigned V = 0, E = 0, a = 0;
 	std::cin >> V >> E >> a;
