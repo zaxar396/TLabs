@@ -35,3 +35,24 @@ void reverse(const int *arr, int n, int father)
 	}
 	cout << father << " ";
 }
+
+void symmet(const int *arr, int n, int father)
+{
+	if (father == -1)
+		father = fRoot(arr, n);
+	int index = 0;
+	for (; index < n; ++index)
+	{
+		if (arr[index] == father)
+		{
+			symmet(arr, n, index++);
+			break;
+		}
+	}
+	cout << father << " ";
+	for (; index < n; ++index)
+	{
+		if (arr[index] == father)
+			symmet(arr, n, index);
+	}
+}
